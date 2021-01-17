@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #fdfdfd;
+}
+
+.tabs {
+    width: 100%;
+    min-height: 100vh;
+    background: center / cover no-repeat url('../img/bgc.jpg');
+    position: relative;
+    padding: 20px;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs {
+        width: 100%;
+        padding: 0;
+        background: #292d3e;;
+    }
+}
+
+.tabs::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #292d3e;
+    opacity: 0.87;
+}
+
+.tabs-box {
+    max-width: 600px;   
+    background-color: #212534;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 599px) {
+    .tabs-box {
+        max-width: 320px;   
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .title__plus {
+        display: none;
+    }
+
+    .title__triangle {
+        display: none;
+    }
+
+    .tabs-box {
+        max-width: 600px;
+        margin: 0 auto;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, -0%);
+        position: relative;
+    }
+}
+
+.tabs__header {
+    display: flex;
+    padding: 30px 50px 0px;
+    background-color: #2b3040;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs__header {
+        padding: 10px 10px 0;
+    }
+}
+
+.tabs__button {
+    font-size: 16px;
+    color: #b7bacd;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 2px solid transparent;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs__button {
+        font-size: 12px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid transparent;
+    }
+}
+
+.tabs__button:hover, .tabs__button:hover svg {
+    color: white;
+    border-color: white;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.button__title {
+    margin-top: 10px;
+}
+
+.tabs__button svg{
+    fill: rgb(189, 195, 199);
+}
+
+.tabs__button.active svg{
+    fill: #fff;
+}
+
+.tabs__button.active {
+    color: white;
+    border-color: white;
+}
+
+.tabs__body {
+    padding: 60px 45px;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs__body {
+        padding: 15px;
+    }
+}
+
+.body__box {
+    display: none;
+    opacity: 0;
+}
+.body__box.active {
+    display: flex;
+    opacity: 1;
+}
+
+@media screen and (max-width: 599px) {
+    .body__box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.body__image img {
+    width: 160px;
+    height: 230px;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+@media screen and (max-width: 599px) {
+    .body__image img {
+        width: 290px;
+        height: auto;
+    }
+}
+
+.body__stars {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.tabs__body-right {
+    margin-left: 40px;
+    flex: 1;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs__body-right {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+.body__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.body__title-name {
+    margin: 0;
+    padding: 0 0 10px;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.body__title-under {
+    font-size: 14px;
+}
+
+.body__rate {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.rate-cirkle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.pie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b7bacd;
+    font-size: 18px;
+}
+
+.body__descr {
+    font-size: 14px;
+    color: #b7bacd;
+    margin-top: 35px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 599px) {
+    .body__descr {
+        margin-top: 15px;
+    }
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 599px) {
+    .price {
+        margin-top: 15px;
+    }
+}
+
+.price__sales {
+    color: #fedc3f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.price__money {
+    font-size: 32px;
+}
+
+.price__btn {
+    border-radius: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #13e28d;
+    border: 0;
+    color: white;
+    max-width: 155px;
+    width: 100%;
+    padding: 20px 0;
+}
